@@ -193,7 +193,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
             ),
           ),
           Text(
-            'You are facing: ${_compassHeading.toStringAsFixed(0)}°',
+            'You are facing: ${((_compassHeading % 360) + 360) % 360 ~/ 1}°',
             style: const TextStyle(fontSize: 15, color: Colors.white54),
           ),
           if (aligned)
